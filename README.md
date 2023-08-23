@@ -1,6 +1,6 @@
 # RocketWebpUtils
 
-**NOTE: This project is not included int eh DNNrocket package.  While it is considered part of DNNrocket it uses it's own install package.**
+**NOTE: This project is not included in the DNNrocket package.  While it is considered part of DNNrocket it uses it's own install package.**
 
 RocketWebpUtils is a wrapper for the google unmanged assembly libwebp_x64.dll.  
 
