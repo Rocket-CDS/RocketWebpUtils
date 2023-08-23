@@ -13,7 +13,7 @@ If the libwebp_x64.dll needs to be upgraded, this package can be used, the AppPo
 **Some assemblies do not need to be upgraded often and to save upgrade processing they are installed by this package**  
 
 ### ThoughtWorks.QRCode.dll  
-This package also installs ThoughtWorks.QRCode.dll.  
 This is to reduce the size of the DNNrocket install package.  ThoughtWorks.QRCode.dll is fairly large and should not need upgrading often.
 
-### 
+### RazorEngine.dll
+This is a razorengine compilation, it's in .Net Framework and should not need upgrading.
