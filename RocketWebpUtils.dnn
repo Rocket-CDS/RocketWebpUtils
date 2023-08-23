@@ -1,0 +1,67 @@
+﻿<dotnetnuke type="Package" version="5.0">
+	<packages>
+		<package name="RocketWebpUtils" type="Library" version="1.0.30">
+			<friendlyName>RocketWebpUtils</friendlyName>
+			<description>Rocket RocketWebpUtils</description>
+      <iconFile></iconFile>
+      <owner>
+				<name>Charles France</name>
+				<organization>DNN Rocket</organization>
+				<url>www.rocket-cds.org</url>
+				<email>support@rocket-cds.org</email>
+			</owner>
+			<license>
+        Copyright (c) 2019, www.rocket-cds.org
+        All rights reserved.
+
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+      </license>
+		<releaseNotes>
+			RocketWebpUtils is a wrapper for the google unmanged assembly libwebp_x64.dll.
+			On install the assmebly will be locked if it has been used.  RocketWebpUtils has been created so it is not loaded on upgrade of DNNrocket.
+
+			If the libwebp_x64.dll needs to be upgraded, this package can be used, the AppPool will need to be recycled and the RocketWebpUtils (Thumbnails) not used before installation, otherwise a lock will happen and the install will fail.
+
+			This package also installs ThoughtWorks.QRCode.dll.  This is to reduce the size of the DNNrocket install package.  ThoughtWorks.QRCode.dll is fairly large and should not need upgrading often.
+
+		</releaseNotes>
+      <dependencies>
+      </dependencies>
+      <components>
+ 
+		  <component type="Assembly">
+			<assemblies>
+
+				<assembly>
+					<path>bin</path>
+					<name>ThoughtWorks.QRCode.dll</name>
+					<sourceFileName>ThoughtWorks.QRCode.dll</sourceFileName>
+				</assembly>
+
+				<assembly>
+					<path>bin</path>
+					<name>RazorEngine.dll</name>
+					<sourceFileName>RazorEngine.dll</sourceFileName>
+					<version>3.10.0</version>
+				</assembly>
+
+				<assembly>
+					<path>bin</path>
+					<name>RocketWebpUtils.dll</name>
+					<sourceFileName>RocketWebpUtils.dll</sourceFileName>
+				</assembly>
+
+				<assembly>
+					<path>bin</path>
+					<name>libwebp_x64.dll</name>
+					<sourceFileName>libwebp_x64.dll</sourceFileName>
+					<version>1.0.2.1</version>
+				</assembly>
+				
+			</assemblies>
+		</component>
+      </components>
+		</package>
+
+  </packages>
+</dotnetnuke>
